@@ -1,0 +1,46 @@
+// Prisma Schema — Proyecto Semana 05
+// Dominio: Club Social
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================
+// Recurso secundario — Plan de membresía (relación 1:N con Member)
+// ============================================================
+model Plan {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  price       Float
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  members Member[]
+
+  @@map("plans")
+}
+
+// ============================================================
+// Recurso principal — Socio del club
+// ============================================================
+model Member {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  phone     String?
+  active    Boolean  @default(true)
+  joinedAt  DateTime @default(now())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  plan   Plan @relation(fields: [planId], references: [id])
+  planId Int
+
+  @@map("members")
+}
