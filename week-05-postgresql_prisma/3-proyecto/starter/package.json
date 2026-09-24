@@ -1,0 +1,32 @@
+{
+  "name": "club-social-semana-05",
+  "version": "1.0.0",
+  "description": "Club Social API — PostgreSQL + Prisma",
+  "engines": { "node": ">=22.0.0" },
+  "packageManager": "pnpm@10.34.5",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "prisma studio"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.8.2",
+    "dotenv": "16.5.0",
+    "express": "5.1.0",
+    "winston": "3.17.0",
+    "zod": "4.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "22.15.29",
+    "prisma": "6.8.2",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}

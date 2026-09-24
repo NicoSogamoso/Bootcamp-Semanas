@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Plan {
+  id           String   @id @default(uuid()) @db.Uuid
+  name         String   @unique
+  description  String?
+  monthlyPrice Int
+  benefits     String[]
+  active       Boolean  @default(true)
+  members      Member[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Member {
+  id             String   @id @default(uuid()) @db.Uuid
+  fullName       String
+  membershipType String
+  monthlyFee     Int
+  active         Boolean  @default(true)
+  joinedAt       DateTime
+  email          String?  @unique
+  planId         String   @db.Uuid
+  plan           Plan     @relation(fields: [planId], references: [id])
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
