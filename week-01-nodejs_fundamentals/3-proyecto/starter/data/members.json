@@ -1,0 +1,14 @@
+[
+  { "id": "m001", "fullName": "Laura Gómez", "membershipType": "vip", "monthlyFee": 150000, "active": true, "joinedYear": 2022 },
+  { "id": "m002", "fullName": "Carlos Pérez", "membershipType": "regular", "monthlyFee": 80000, "active": true, "joinedYear": 2023 },
+  { "id": "m003", "fullName": "Ana Ruiz", "membershipType": "vip", "monthlyFee": 150000, "active": true, "joinedYear": 2023 },
+  { "id": "m004", "fullName": "Diego Torres", "membershipType": "honorario", "monthlyFee": 0, "active": true, "joinedYear": 2020 },
+  { "id": "m005", "fullName": "Sofía Vargas", "membershipType": "regular", "monthlyFee": 80000, "active": false, "joinedYear": 2024 },
+  { "id": "m006", "fullName": "Andrés López", "membershipType": "regular", "monthlyFee": 80000, "active": true, "joinedYear": 2021 },
+  { "id": "m007", "fullName": "Camila Díaz", "membershipType": "vip", "monthlyFee": 150000, "active": true, "joinedYear": 2024 },
+  { "id": "m008", "fullName": "Felipe Rojas", "membershipType": "honorario", "monthlyFee": 0, "active": false, "joinedYear": 2019 },
+  { "id": "m009", "fullName": "Valentina Cruz", "membershipType": "regular", "monthlyFee": 80000, "active": true, "joinedYear": 2025 },
+  { "id": "m010", "fullName": "Mateo Silva", "membershipType": "vip", "monthlyFee": 150000, "active": true, "joinedYear": 2022 },
+  { "id": "m011", "fullName": "Isabella Mora", "membershipType": "regular", "monthlyFee": 80000, "active": true, "joinedYear": 2023 },
+  { "id": "m012", "fullName": "Santiago Mejía", "membershipType": "honorario", "monthlyFee": 0, "active": true, "joinedYear": 2018 }
+]
