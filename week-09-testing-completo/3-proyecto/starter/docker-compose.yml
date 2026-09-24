@@ -1,0 +1,10 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: club-social-semana-09-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - club-social-s09-data:/data/db
+volumes:
+  club-social-s09-data:
